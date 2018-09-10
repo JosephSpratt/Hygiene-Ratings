@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+  </script>
+  <style>
+  #select_page_number{
+    position: relative;
+    right:-150px;
+    bottom:0px;
+    weight: bold;
+
+  }
+  .btn-group {
+    position: relative;
+    right:-400px;
+    bottom: -20px;
+  }
+  h1 {
+    font: 600 1.5em/1 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+
+}
+thead{
+  font: 200 1.2em/1 'Raleway', sans-serif;
+  color: rgba(0,0,0,.5)
+
+}
+.submit {
+  font: 600 1.5em/1 'Raleway', sans-serif;
+ padding: 6px 10px;
+ background: #ddd;
+ font-size: 13px;
+ border: none;
+}
+#b_name{
+  font: 600 1em/.75 'Raleway', sans-serif;
+  color: rgba(0,0,0,.5);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+
+
+}
+
+
+  </style>
+  <script>
+
+  $(document).ready(function(){
+    $.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+    {op:"retrieve", page: $('.one').text() }, function(data){
+      var res_data = '';
+      $.each(JSON.parse(data), function(key, value){
+        res_data += '<tr>';
+        res_data += '<td>' +value.business+'</td>';
+        res_data += '<td>' +value.address+'</td>';
+        res_data += '<td>' +value.rating+'</td>';
+        res_data += '<td>' +value.date+'</td>';
+        res_data += '</tr>';
+      });
+      $('#res_table').append(res_data);
+    });
+    $('.one').click(function(){
+      $('#res_table tbody').empty();
+    $.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+    {op:"retrieve", page: $('.one').text() }, function(data){
+      var res_data = '';
+      $.each(JSON.parse(data), function(key, value){
+        res_data += '<tr>';
+        res_data += '<td>' +value.business+'</td>';
+        res_data += '<td>' +value.address+'</td>';
+        res_data += '<td>' +value.rating+'</td>';
+        res_data += '<td>' +value.date+'</td>';
+        res_data += '</tr>';
+      });
+      $('#res_table tbody').append(res_data);
+    });
+  });
+    $('.two').click(function(){
+        $('#res_table tbody').empty();
+    $.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+    {op:"retrieve", page: $('.two').text() }, function(data){
+      var res_data = '';
+
+      $.each(JSON.parse(data), function(key, value){
+        res_data += '<tr>';
+        res_data += '<td>' +value.business+'</td>';
+        res_data += '<td>' +value.address+'</td>';
+        res_data += '<td>' +value.rating+'</td>';
+        res_data += '<td>' +value.date+'</td>';
+        res_data += '</tr>';
+      });
+      $('#res_table tbody').append(res_data);
+    });
+  });
+
+  $('.three').click(function(){
+      $('#res_table tbody').empty();
+  $.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+  {op:"retrieve", page: $('.three').text() }, function(data){
+    var res_data = '';
+
+    $.each(JSON.parse(data), function(key, value){
+      res_data += '<tr>';
+      res_data += '<td>' +value.business+'</td>';
+      res_data += '<td>' +value.address+'</td>';
+      res_data += '<td>' +value.rating+'</td>';
+      res_data += '<td>' +value.date+'</td>';
+      res_data += '</tr>';
+    });
+    $('#res_table tbody').append(res_data);
+  });
+});
+
+$('.four').click(function(){
+    $('#res_table tbody').empty();
+$.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+{op:"retrieve", page: $('.four').text() }, function(data){
+  var res_data = '';
+
+  $.each(JSON.parse(data), function(key, value){
+    res_data += '<tr>';
+    res_data += '<td>' +value.business+'</td>';
+    res_data += '<td>' +value.address+'</td>';
+    res_data += '<td>' +value.rating+'</td>';
+    res_data += '<td>' +value.date+'</td>';
+    res_data += '</tr>';
+  });
+  $('#res_table tbody').append(res_data);
+});
+});
+
+$('.five').click(function(){
+    $('#res_table tbody').empty();
+$.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+{op:"retrieve", page: $('.five').text() }, function(data){
+  var res_data = '';
+
+  $.each(JSON.parse(data), function(key, value){
+    res_data += '<tr>';
+    res_data += '<td>' +value.business+'</td>';
+    res_data += '<td>' +value.address+'</td>';
+    res_data += '<td>' +value.rating+'</td>';
+    res_data += '<td>' +value.date+'</td>';
+    res_data += '</tr>';
+  });
+  $('#res_table tbody').append(res_data);
+});
+});
+
+$('.six').click(function(){
+    $('#res_table tbody').empty();
+$.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+{op:"retrieve", page: $('.six').text() }, function(data){
+  var res_data = '';
+
+  $.each(JSON.parse(data), function(key, value){
+    res_data += '<tr>';
+    res_data += '<td>' +value.business+'</td>';
+    res_data += '<td>' +value.address+'</td>';
+    res_data += '<td>' +value.rating+'</td>';
+    res_data += '<td>' +value.date+'</td>';
+    res_data += '</tr>';
+  });
+  $('#res_table tbody').append(res_data);
+});
+});
+
+$('.seven').click(function(){
+    $('#res_table tbody').empty();
+$.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+{op:"retrieve", page: $('.seven').text() }, function(data){
+  var res_data = '';
+
+  $.each(JSON.parse(data), function(key, value){
+    res_data += '<tr>';
+    res_data += '<td>' +value.business+'</td>';
+    res_data += '<td>' +value.address+'</td>';
+    res_data += '<td>' +value.rating+'</td>';
+    res_data += '<td>' +value.date+'</td>';
+    res_data += '</tr>';
+  });
+  $('#res_table tbody').append(res_data);
+});
+});
+
+$('.eight').click(function(){
+    $('#res_table tbody').empty();
+$.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+{op:"retrieve", page: $('.eight').text() }, function(data){
+  var res_data = '';
+
+  $.each(JSON.parse(data), function(key, value){
+    res_data += '<tr>';
+    res_data += '<td>' +value.business+'</td>';
+    res_data += '<td>' +value.address+'</td>';
+    res_data += '<td>' +value.rating+'</td>';
+    res_data += '<td>' +value.date+'</td>';
+    res_data += '</tr>';
+  });
+  $('#res_table tbody').append(res_data);
+});
+});
+
+$('.nine').click(function(){
+    $('#res_table tbody').empty();
+$.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+{op:"retrieve", page: $('.nine').text() }, function(data){
+  var res_data = '';
+
+  $.each(JSON.parse(data), function(key, value){
+    res_data += '<tr>';
+    res_data += '<td>' +value.business+'</td>';
+    res_data += '<td>' +value.address+'</td>';
+    res_data += '<td>' +value.rating+'</td>';
+    res_data += '<td>' +value.date+'</td>';
+    res_data += '</tr>';
+  });
+  $('#res_table tbody').append(res_data);
+});
+});
+
+$('.ten').click(function(){
+    $('#res_table tbody').empty();
+$.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+{op:"retrieve", page: $('.ten').text() }, function(data){
+  var res_data = '';
+
+  $.each(JSON.parse(data), function(key, value){
+    res_data += '<tr>';
+    res_data += '<td>' +value.business+'</td>';
+    res_data += '<td>' +value.address+'</td>';
+    res_data += '<td>' +value.rating+'</td>';
+    res_data += '<td>' +value.date+'</td>';
+    res_data += '</tr>';
+  });
+  $('#res_table tbody').append(res_data);
+});
+});
+
+$('.eleven').click(function(){
+    $('#res_table tbody').empty();
+$.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+{op:"retrieve", page: $('.eleven').text() }, function(data){
+  var res_data = '';
+
+  $.each(JSON.parse(data), function(key, value){
+    res_data += '<tr>';
+    res_data += '<td>' +value.business+'</td>';
+    res_data += '<td>' +value.address+'</td>';
+    res_data += '<td>' +value.rating+'</td>';
+    res_data += '<td>' +value.date+'</td>';
+    res_data += '</tr>';
+  });
+  $('#res_table tbody').append(res_data);
+});
+});
+
+$('.twelve').click(function(){
+    $('#res_table tbody').empty();
+$.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+{op:"retrieve", page: $('.twelve').text() }, function(data){
+  var res_data = '';
+
+  $.each(JSON.parse(data), function(key, value){
+    res_data += '<tr>';
+    res_data += '<td>' +value.business+'</td>';
+    res_data += '<td>' +value.address+'</td>';
+    res_data += '<td>' +value.rating+'</td>';
+    res_data += '<td>' +value.date+'</td>';
+    res_data += '</tr>';
+  });
+  $('#res_table tbody').append(res_data);
+});
+});
+
+$('.thirteen').click(function(){
+    $('#res_table tbody').empty();
+$.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+{op:"retrieve", page: $('.thirteen').text() }, function(data){
+  var res_data = '';
+
+  $.each(JSON.parse(data), function(key, value){
+    res_data += '<tr>';
+    res_data += '<td>' +value.business+'</td>';
+    res_data += '<td>' +value.address+'</td>';
+    res_data += '<td>' +value.rating+'</td>';
+    res_data += '<td>' +value.date+'</td>';
+    res_data += '</tr>';
+  });
+  $('#res_table tbody').append(res_data);
+});
+});
+
+$('.fourteen').click(function(){
+    $('#res_table tbody').empty();
+$.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+{op:"retrieve", page: $('.fourteen').text() }, function(data){
+  var res_data = '';
+
+  $.each(JSON.parse(data), function(key, value){
+    res_data += '<tr>';
+    res_data += '<td>' +value.business+'</td>';
+    res_data += '<td>' +value.address+'</td>';
+    res_data += '<td>' +value.rating+'</td>';
+    res_data += '<td>' +value.date+'</td>';
+    res_data += '</tr>';
+  });
+  $('#res_table tbody').append(res_data);
+});
+});
+
+$('.fifteen').click(function(){
+    $('#res_table tbody').empty();
+$.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+{op:"retrieve", page: $('.fifteen').text() }, function(data){
+  var res_data = '';
+
+  $.each(JSON.parse(data), function(key, value){
+    res_data += '<tr>';
+    res_data += '<td>' +value.business+'</td>';
+    res_data += '<td>' +value.address+'</td>';
+    res_data += '<td>' +value.rating+'</td>';
+    res_data += '<td>' +value.date+'</td>';
+    res_data += '</tr>';
+  });
+  $('#res_table tbody').append(res_data);
+});
+});
+
+$('.submit').click(function(){
+    $('#res_table tbody').empty();
+$.get('https://www.cs.kent.ac.uk/people/staff/lb514/hygiene/hygiene.php',
+{op:"searchname", name: $('.textbox').val() }, function(data){
+  var res_data = '';
+console.log(data)
+  $.each(JSON.parse(data), function(key, value){
+    res_data += '<tr>';
+    res_data += '<td>' +value.business+'</td>';
+    res_data += '<td>' +value.address+'</td>';
+    res_data += '<td>' +value.rating+'</td>';
+    res_data += '<td>' +value.date+'</td>';
+    res_data += '</tr>';
+  });
+  $('#res_table tbody').append(res_data);
+});
+});
+
+   });
+
+
+
+  </script>
+</head>
+<body>
+  <h1> Hygiene Rating </h1>
+  <div class="container">
+  <form>
+<p id="b_name">Business Name: <input type="text" class="textbox"> </p> (please be aware the search is case sensitive) </p>
+<p><input type="button" class="submit" value="Search"></p>
+</form>
+  <table id='res_table'>
+    <div>
+      <thead>
+    <tr>
+
+      <th>Business</th>
+      <th>Address</th>
+      <th>Rating</th>
+      <th>Date</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+
+  </tbody>
+
+  </table>
+
+  <div class="btn-group">
+  <p id="select_page_number" class="pages">~Select Page Number~</p>
+  <button class="one" type="button">1</button>
+  <button class="two" type="button">2</button>
+  <button class="three" type="button">3</button>
+  <button class="four" type="button">4</button>
+  <button class="five" type="button">5</button>
+  <button class="six" type="button">6</button>
+  <button class="seven" type="button">7</button>
+  <button class="eight" type="button">8</button>
+  <button class="nine" type="button">9</button>
+  <button class="ten" type="button">10</button>
+  <button class="eleven" type="button">11</button>
+  <button class="twelve" type="button">12</button>
+  <button class="thirteen" type="button">13</button>
+  <button class="fourteen" type="button">14</button>
+  <button class="fifteen" type="button">15</button>
+</div>
+</div>
+</body>
+
+</html>
